@@ -1,0 +1,60 @@
+default:
+  prefix: '&f[newb]'
+  suffix: ''
+  description: 'Default rank. YAY!'
+  order: 1
+builder:
+  prefix: ''
+  suffix: '&2[B]'
+  description: 'Has build permissions'
+  order: 2
+chatmod:
+  prefix: ''
+  suffix: '&c[M]'
+  description: 'Chat moderator'
+  order: 3
+gamemod:
+  prefix: ''
+  suffix: '&4[M]'
+  description: 'Game/server moderator'
+  order: 4
+admin:
+  prefix: ''
+  suffix: '&4[A]'
+  description: 'Game/server administrator'
+  order: 5
+owner:
+  prefix: ''
+  suffix: '&6[O]'
+  description: 'Server owner'
+  order: 6
+d1:
+  prefix: ''
+  suffix: '&7[D]'
+  description: 'Donator: Donated $5-$9.99'
+  order: 7
+d2:
+  prefix: ''
+  suffix: '&2[D]'
+  description: 'Donator: Donated $10-19.99'
+  order: 8
+d3:
+  prefix: ''
+  suffix: '&6[D]'
+  description: 'Donator: Donated $20-$49.99'
+  order: 9
+s1:
+  prefix: ''
+  suffix: '&2[S]'
+  description: 'Sponsor: Donated $50-$99.99'
+  order: 10
+s2:
+  prefix: ''
+  suffix: '&6[S]'
+  description: 'Sponsor: Donated $100-$199.99'
+  order: 11
+s3:
+  prefix: ''
+  suffix: '&1[S]'
+  description: 'Sponsor: Donated $200 or more!'
+  order: 12

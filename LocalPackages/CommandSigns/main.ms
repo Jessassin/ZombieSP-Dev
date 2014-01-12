@@ -2,7 +2,7 @@
 bind(player_interact, null, array(block: data_values('sign_post'),button: 'right', item: 0), @event,
 	#define ivars
 	@line1 = get_sign_text(@event['location'])[0]
-	@command = get_sign_text(@event['location'])[1]
+	@line2 = get_sign_text(@event['location'])[1]
 	@line3 = get_sign_text(@event['location'])[2]
 	@line4 = get_sign_text(@event['location'])[3]
 	#If line 1 is not a valid commandsign, break. !Note color!
@@ -10,7 +10,7 @@ bind(player_interact, null, array(block: data_values('sign_post'),button: 'right
 		break()
 	)
 	#else try running command starting on line 2
-	try(run_cmd(concat(@command,' ',@line3,' ',@line4)))
+	try(run_cmd(concat(@line2,' ',@line3,' ',@line4)))
 )
 
 #bind sign changed event

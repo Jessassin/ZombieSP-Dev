@@ -1,0 +1,30 @@
+*:/ranks = >>>
+	@file = read('rankconfig.yml')
+	@yml = yml_decode(@file)
+	@rankcount = length(@yml)
+	@i = 1
+	@sortedranks = array()
+	foreach(@yml,@rank,
+		array_set(@sortedranks,@rank['order'],@rank)
+	)
+	msg(colorize('&6============================================='))
+	msg()
+	for(assign(@i,1), @i < length(@sortedranks), @i = @i ,
+		@rank = @sortedranks[@i]
+		@prefix = @rank['prefix']
+		@suffix = @rank['suffix']
+		@description = @rank['description']
+		if(lt(length(@prefix),1),
+			@prefix = '',
+			@prefix = concat('&fPrefix: ',@prefix)
+		)
+		if(lt(length(@suffix),1),
+			@suffix = '',
+			@suffix = concat('&fSuffix: ',@suffix)
+		)
+		msg(colorize(concat(@prefix,@suffix,'&f: ',@description)))
+		@i++
+	)
+	msg()
+	msg(colorize('&6============================================='))
+<<<
