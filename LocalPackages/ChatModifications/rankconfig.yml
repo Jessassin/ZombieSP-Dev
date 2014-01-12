@@ -1,5 +1,5 @@
 default:
-  prefix: '&f[newb]'
+  prefix: '&d[newb]'
   suffix: ''
   description: 'Default rank. YAY!'
   order: 1
