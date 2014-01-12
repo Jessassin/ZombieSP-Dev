@@ -9,7 +9,7 @@
 	)
 	msg(colorize('&6============================================='))
 	msg()
-	for(assign(@i,1), @i < length(@sortedranks), @i = @i ,
+	for(assign(@i,1), @i <= length(@sortedranks), @i = @i ,
 		@rank = @sortedranks[@i]
 		@prefix = @rank['prefix']
 		@suffix = @rank['suffix']
