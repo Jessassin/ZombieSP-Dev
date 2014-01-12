@@ -1,0 +1,18 @@
+CREEPER:
+  enabled: 'false'
+ZOMBIE:
+  enabled: 'true'
+SKELETON:
+  enabled: 'false'
+SPIDER:
+  enabled: 'false'
+SLIME:
+  enabled: 'false'
+ENDERMAN:
+  enabled: 'false'
+WITCH:
+  enabled: 'false'
+SILVERFISH:
+  enabled: 'false'
+CAVESPIDER:
+  enabled: 'false'
