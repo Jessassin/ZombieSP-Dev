@@ -8,31 +8,31 @@ bind(creature_spawn,null,null,@event,
 	if(@reason == 'CUSTOM',
 		return()
 	)
-	#checks to ensure the "mobs" key is defined in spawnconditions.yml
+	#checks to ensure the "mobs" key is defined in spawnconditions.yml Tells console if otherwise
 	if(array_index_exists(@yml,'mobs'),
 		assign(@mobs,@yml['mobs']),
 		console('The index "mobs" was not found in spawnconditions.yml')
 		cancel()
 		return()
 	)	
-	#checks to ensure that the mob type subkey is defined in spawnconditions.yml
+	#checks to ensure that the mob type subkey is defined in spawnconditions.yml Tells console if otherwise
 	if(array_index_exists(@mobs,@type),
 		assign(@condition,@mobs[@type]),
 		console(concat('The specified mob type: ',@type,' is not defined in spawnconditions.yml'))
 		cancel()
 		return()
 	)
-	#checks to ensure that the reason subkey is defined under the mobs subkey in spawnconditions.yml
+	#checks to ensure that the reason subkey is defined under the mobs subkey in spawnconditions.yml Tells console if otherwise
 	if(not(array_contains_ic(array_keys(@condition),@reason)),
 		console(concat('The spawn reason: ',@reason,' is not defined for: ',@type,' in spawnconditions.yml'))
 		cancel()
 		return()
 	)
-	#if not enabled, cancel event
+	#if specific mob is not enabled, cancel event
 	if(not(@condition['enabled']),
 		cancel()
 		return(),
-		#if not allowed, cancel
+		#if specific mob is not allowed, cancel
 		@allowed = @condition[to_lower(@reason)]
 		if(not(@allowed),
 			cancel()
@@ -49,12 +49,10 @@ bind(creature_spawn,null,null,@event,
 			@rand = rand(0,100)
 			#if the defined variable is >= to the random number generated, spawn a baby - else, don't
 			if(gte(@babychance,@rand),
-				#broadcast('BABY!')
 				@spawnbaby = true,
 				@spawnbaby = false
 			)
 		)
-		#broadcast(@spawnbaby)
 	)
 	#Same code as above, except for villagers
 	if(array_index_exists(@condition,'villagerchance')
@@ -66,16 +64,13 @@ bind(creature_spawn,null,null,@event,
 			@rand = rand(0,100)
 			#if the defined variable is >= to the random number generated, spawn a villager - else, don't
 			if(gte(@villagerchance,@rand),
-				#broadcast('Villager!')
 				@spawnvillager = true,
 				@spawnvillager = false
 			)
 		)
-		#broadcast(@spawnvillager)
 	)
 	#finally, cancel the event, and spawn mob based on our perameters
 	cancel()
-	broadcast(@event)
 	#reset head vertical position, because it is incorrectly processed for some reason
 	@event['location']['yaw'] = 0
 	@type = @event['type']
