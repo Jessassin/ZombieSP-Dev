@@ -73,12 +73,15 @@ bind(creature_spawn,null,null,@event,
 	cancel()
 	#reset head vertical position, because it is incorrectly processed for some reason
 	@event['location']['yaw'] = 0
-	@type = @event['type']
-	if(@spawnbaby,
+	if(and(@spawnbaby,@spawnvillager),
+		@type = concat(@type,':baby-villager')
+	)
+	if(and(@spawnbaby,not(@spawnvillager)),
 		@type = concat(@type,':baby')
 	)
-	if(@spawnvillager,
+	if(and(not(@spawnbaby),@spawnvillager),
 		@type = concat(@type,':villager')
 	)
+	broadcast(@type)
 	spawn_mob(@type,1,@event['location'])
 )
