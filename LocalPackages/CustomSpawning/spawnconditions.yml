@@ -1,18 +1,185 @@
-CREEPER:
-  enabled: 'false'
-ZOMBIE:
-  enabled: 'true'
-SKELETON:
-  enabled: 'false'
-SPIDER:
-  enabled: 'false'
-SLIME:
-  enabled: 'false'
-ENDERMAN:
-  enabled: 'false'
-WITCH:
-  enabled: 'false'
-SILVERFISH:
-  enabled: 'false'
-CAVESPIDER:
-  enabled: 'false'
+#allow-unknowns: allow spawning of mobs if the type is not defined (currently not implemented, spawning cancelled by default)
+
+settings:
+  allow-unknowns: false
+  
+#enabled = whether or not to allow spawning of specific mob (overrides all other settings)
+#natural = whether or not to allow spawning via natural means (low light level for mobs, low chance grass spawn for animals)
+#spawner_egg = whether or not to allow spawning via spawn eggs
+#spawner = whether or not to allow spawning via spawners
+#jockey = whether or not to allow jockey spawning (skeletons on spiders, baby zombies on chickens)
+#reinforcements = whether or not to allow spawning via 1.7's "reinforcements" or "social zombies" feature
+#village_invasion = whether or not to allow spawning of zombies for the "village invasion" event
+#breeding = whether or not to allow spawning via breeding
+#generation = whether or not to allow spawning via chunk generation
+#babychance = the percentage chance that the spawn will result in a baby mob
+#villagerchance = the percentage chance that a zombie spawn will be a villager
+
+mobs:
+  CREEPER:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  ZOMBIE:
+    enabled: true
+    natural: true
+    spawner_egg: true
+    spawner: true
+    jockey: true
+    reinforcements: false
+    village_invasion: false
+    babychance: 100
+    villagerchance: 100
+  SKELETON:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    jockey: false
+  SPIDER:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    jockey: false
+  SLIME:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  ENDERMAN:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  WITCH:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  SILVERFISH:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  CAVESPIDER:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  BAT:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  BLAZE:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  CHICKEN:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    jockey: false
+    babychance: 100
+  COW:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    babychance: 100
+  ENDERDRAGON:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  GHAST:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  GIANT:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  HORSE:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    babychance: 100
+  IRONGOLEM:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  MAGMACUBE:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  MOOSHROOM:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    babychance: 100
+  OCELOT:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    babychance: 100
+  PIG:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    babychance: 100
+  PIGZOMBIE:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    babychance: 100
+  SHEEP:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    babychance: 100
+  SNOWGOLEM:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  SPIDERJOCKEY:
+    enabled: false
+    natural: false
+    spawner: false
+  SQUID:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  VILLAGER:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    babychance: 100
+  WITHER_SKULL:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+  WOLF:
+    enabled: false
+    natural: false
+    spawner_egg: false
+    spawner: false
+    babychance: 100
