@@ -82,5 +82,6 @@ bind(creature_spawn,null,null,@event,
 	if(and(not(@spawnbaby),@spawnvillager),
 		@type = concat(@type,':villager')
 	)
+	_spawn_mob(@type,1,@event['location'])
 	spawn_mob(@type,1,@event['location'])
 )

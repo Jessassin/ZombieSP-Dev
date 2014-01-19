@@ -183,3 +183,61 @@ mobs:
     spawner_egg: false
     spawner: false
     babychance: 100
+
+#Custom equipment spawning
+equipment: 
+  ZOMBIE: 
+    WEAPON: 
+    HELMET: 
+    CHESTPLATE: 
+    LEGGINGS: 
+    BOOTS: 
+  ZOMBIE-BABY: 
+    WEAPON:
+      type: 264
+    HELMET: 
+    CHESTPLATE: 
+    LEGGINGS: 
+    BOOTS: 
+  ZOMBIE-VILLAGER: 
+    WEAPON:
+      type: 388
+    HELMET: 
+    CHESTPLATE: 
+    LEGGINGS: 
+    BOOTS: 
+  ZOMBIE-BABY-VILLAGER: 
+    WEAPON:
+      type: 133
+    HELMET: 
+    CHESTPLATE: 
+    LEGGINGS: 
+    BOOTS: 
+
+#sets the drop rates for each equipment slot of a mob. between 0 and 1 (use decimals)
+#leave blank for vanilla drop rate
+droprates:
+  ZOMBIE: 
+    WEAPON: 1
+    HELMET: 
+    CHESTPLATE: 
+    LEGGINGS: 
+    BOOTS: 
+  ZOMBIE-BABY: 
+    WEAPON: 1
+    HELMET: 
+    CHESTPLATE: 
+    LEGGINGS: 
+    BOOTS: 
+  ZOMBIE-VILLAGER: 
+    WEAPON: 1
+    HELMET: 
+    CHESTPLATE: 
+    LEGGINGS: 
+    BOOTS: 
+  ZOMBIE-BABY-VILLAGER: 
+    WEAPON: .5
+    HELMET: 
+    CHESTPLATE: 
+    LEGGINGS: 
+    BOOTS: 
