@@ -8,7 +8,7 @@
 		array_set(@sortedranks,@rank['order'],@rank)
 	)
 	msg(colorize('&6====================================================='))
-	for(assign(@i,1), @i <= length(@sortedranks), @i = @i ,
+	for(assign(@i,1), @i <= length(@sortedranks), @i++,
 		@rank = @sortedranks[@i]
 		@prefix = @rank['prefix']
 		@suffix = @rank['suffix']
@@ -22,7 +22,6 @@
 			@suffix = concat('&fSuffix: ',@suffix)
 		)
 		msg(colorize(concat(@prefix,@suffix,'&f: ',@description)))
-		@i++
 	)
 	msg(colorize('&6====================================================='))
 <<<
