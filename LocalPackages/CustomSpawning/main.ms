@@ -40,7 +40,7 @@ bind(creature_spawn,null,null,@event,
 		)
 	)
 	#If babychance is defined, determine if a baby should be spawned based on percentage
-	if(array_index_exists(@condition,'babychance')
+	if(array_index_exists(@condition,'babychance'),
 		@babychance = @condition['babychance']
 		#if the defined value is >= 100 spawn baby and skip check
 		if(gte(@babychance,100),
@@ -55,7 +55,7 @@ bind(creature_spawn,null,null,@event,
 		)
 	)
 	#Same code as above, except for villagers
-	if(array_index_exists(@condition,'villagerchance')
+	if(array_index_exists(@condition,'villagerchance'),
 		@villagerchance = @condition['villagerchance']
 		#if the defined value is >= 100 spawn villager and skip check
 		if(gte(@villagerchance,100),
