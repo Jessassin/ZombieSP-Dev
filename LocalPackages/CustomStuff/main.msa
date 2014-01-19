@@ -1,5 +1,1 @@
 *:/ra = if(pisop(player()),sudo('/reloadaliases'),die(color(4),'OPS ONLY!'))
-
-*:/test = tmsg(player(),'Test')
-
-*:/test2 = run_cmd('/test')
