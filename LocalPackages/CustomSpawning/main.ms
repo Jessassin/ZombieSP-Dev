@@ -83,5 +83,4 @@ bind(creature_spawn,null,null,@event,
 		@type = concat(@type,':villager')
 	)
 	_spawn_mob(@type,1,@event['location'])
-	spawn_mob(@type,1,@event['location'])
 )
