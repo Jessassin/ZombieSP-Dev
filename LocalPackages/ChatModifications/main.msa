@@ -7,8 +7,7 @@
 	foreach(@yml,@rank,
 		array_set(@sortedranks,@rank['order'],@rank)
 	)
-	msg(colorize('&6============================================='))
-	msg()
+	msg(colorize('&6====================================================='))
 	for(assign(@i,1), @i <= length(@sortedranks), @i = @i ,
 		@rank = @sortedranks[@i]
 		@prefix = @rank['prefix']
@@ -25,6 +24,5 @@
 		msg(colorize(concat(@prefix,@suffix,'&f: ',@description)))
 		@i++
 	)
-	msg()
-	msg(colorize('&6============================================='))
+	msg(colorize('&6====================================================='))
 <<<

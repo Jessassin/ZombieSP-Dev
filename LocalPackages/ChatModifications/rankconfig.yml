@@ -1,60 +1,90 @@
 default:
-  prefix: '&d[newb]'
+  prefix: '&d[Newb]'
   suffix: ''
   description: 'Default rank. YAY!'
   order: 1
+survivor:
+  prefix: '&f[Survivor]'
+  suffix: ''
+  description: 'Passed the tutorial, doing alright'
+  order: 2
+recognized:
+  prefix: '&a[Recognized]'
+  suffix: ''
+  description: 'Acheived by completing X'
+  order: 3
+professional:
+  prefix: '&2[Professional]'
+  suffix: ''
+  description: 'Acheived by completing Y'
+  order: 4
+elite:
+  prefix: '&2[Elite]'
+  suffix: ''
+  description: 'Acheived by completing Z'
+  order: 5
+legend:
+  prefix: '&6[Legend]'
+  suffix: ''
+  description: 'Acheived by being Legendary!'
+  order: 6
 builder:
   prefix: ''
   suffix: '&2[B]'
   description: 'Has build permissions'
-  order: 2
+  order: 7
 chatmod:
   prefix: ''
   suffix: '&c[M]'
   description: 'Chat moderator'
-  order: 3
+  order: 8
 gamemod:
   prefix: ''
   suffix: '&4[M]'
   description: 'Game/server moderator'
-  order: 4
+  order: 9
 admin:
   prefix: ''
   suffix: '&4[A]'
   description: 'Game/server administrator'
-  order: 5
+  order: 10
 owner:
   prefix: ''
   suffix: '&6[O]'
   description: 'Server owner'
-  order: 6
+  order: 11
 d1:
   prefix: ''
   suffix: '&7[D]'
   description: 'Donator: Donated $5-$9.99'
-  order: 7
+  order: 12
 d2:
   prefix: ''
   suffix: '&2[D]'
   description: 'Donator: Donated $10-19.99'
-  order: 8
+  order: 13
 d3:
   prefix: ''
   suffix: '&6[D]'
   description: 'Donator: Donated $20-$49.99'
-  order: 9
+  order: 14
 s1:
   prefix: ''
   suffix: '&2[S]'
   description: 'Sponsor: Donated $50-$99.99'
-  order: 10
+  order: 15
 s2:
   prefix: ''
   suffix: '&6[S]'
   description: 'Sponsor: Donated $100-$199.99'
-  order: 11
+  order: 16
 s3:
   prefix: ''
   suffix: '&1[S]'
   description: 'Sponsor: Donated $200 or more!'
-  order: 12
+  order: 17
+vip:
+  prefix: ''
+  suffix: '&b[VIP]'
+  description: 'Exclusive rank for designated users'
+  order: 18
