@@ -1,4 +1,7 @@
+_respawn_tick_start()
+
 bind(player_interact,null,array(block: '33:6','33:7'),@event,
+	#broadcast(@event['location'])
 	@file = read('config.yml')
 	@yml = yml_decode(@file)
 	set_block_at(@event['location'],0)

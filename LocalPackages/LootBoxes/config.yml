@@ -1,5 +1,20 @@
+# respawn interval - Time in milliseconds between respawn events
+# respawn-all:
+# -true respawns all boxes on every respawn event
+# -false respawns a single random box per respawn event
+
 settings:
-  
+  high:
+    respawn-interval: 10000
+    respawn-all: false
+  low:
+    respawn-interval: 10000
+    respawn-all: false
+
+#dropx configuration:
+# drops low / high for low/high quality boxes
+#Format: Quality: ID: Chance: int<0-100>
+#Chance is chance of spawning / 100
 drops:
   low:
     3:
@@ -13,15 +28,14 @@ drops:
     13:
       chance: 75
     17:
-      chance: 75
+      chance: 100
     "17:1":
       chance: 100
     "17:2":
       chance: 100
     "17:3":
       chance: 100
-    
-    
+
   high:
     264:
       chance: 20
