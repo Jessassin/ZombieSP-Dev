@@ -1,0 +1,3 @@
+#commands go here
+
+*:/testdb = msg(_testdb())
