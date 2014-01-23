@@ -10,11 +10,11 @@ This is a set of commandhelper packages for use in my upcoming server.
 * Custom Spawning (Only tested for zombies) Allows for enabling/disabling mobs, as well as equipment customization
 * Login handler (provides on-login events, and returns changable MOTD without server restart)
 * Loot boxes (players gain loot based on respawnable loot boxes)
+* In-game news / changelog
 
 ***
 
 ### Upcoming features:
-* In-game news / changelog
 * Econonomy system (banks / wallets)
 * Economy system (Purchase items from "admin" shops)
 * Economy system (Purchase items from "player" shops)
