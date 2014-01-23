@@ -1,0 +1,5 @@
+motd: 'Welcome to Jessassins Zombie-SP'
+changelog:
+  version: 0.0.0
+  details:
+    - 'Changelog added.'
