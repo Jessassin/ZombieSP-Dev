@@ -1,0 +1,185 @@
+#format:
+# item:
+  # material: iron
+  # durability:
+  # ingot_cost:
+  # return_nuggets: false ##NOT IMPLEMENTED##
+
+#Tools/weapons
+iron_shovel:
+  material: iron_ingot
+  durability: 250
+  ingot_cost: 1
+  return_nuggets: false
+iron_pickaxe:
+  material: iron_ingot
+  durability: 250
+  ingot_cost: 3
+  return_nuggets: false
+iron_axe:
+  material: iron_ingot
+  durability: 250
+  ingot_cost: 3
+  return_nuggets: false
+iron_sword:
+  material: iron_ingot
+  durability: 250
+  ingot_cost: 2
+  return_nuggets: false
+iron_hoe:
+  material: iron_ingot
+  durability: 250
+  ingot_cost: 2
+  return_nuggets: false
+golden_shovel:
+  material: gold_ingot
+  durability: 32
+  ingot_cost: 1
+  return_nuggets: false
+golden_pickaxe:
+  material: gold_ingot
+  durability: 32
+  ingot_cost: 3
+  return_nuggets: false
+golden_axe:
+  material: gold_ingot
+  durability: 32
+  ingot_cost: 3
+  return_nuggets: false
+golden_sword:
+  material: gold_ingot
+  durability: 32
+  ingot_cost: 2
+  return_nuggets: false
+golden_hoe:
+  material: gold_ingot
+  durability: 32
+  ingot_cost: 2
+  return_nuggets: false
+diamond_shovel:
+  material: diamond
+  durability: 1561
+  ingot_cost: 1
+  return_nuggets: false
+diamond_pickaxe:
+  material: diamond
+  durability: 1561
+  ingot_cost: 3
+  return_nuggets: false
+diamond_axe:
+  material: diamond
+  durability: 1561
+  ingot_cost: 3
+  return_nuggets: false
+diamond_sword:
+  material: diamond
+  durability: 1561
+  ingot_cost: 2
+  return_nuggets: false
+diamond_hoe:
+  material: diamond
+  durability: 1561
+  ingot_cost: 2
+  return_nuggets: false
+
+#armor
+leather_cap:
+  material: leather
+  durability: 55
+  ingot_cost: 5
+  return_nuggets: false
+leather_tunic:
+  material: leather
+  durability: 78
+  ingot_cost: 8
+  return_nuggets: false
+leather_pants:
+  material: leather
+  durability: 75
+  ingot_cost: 7
+  return_nuggets: false
+leather_boots:
+  material: leather
+  durability: 65
+  ingot_cost: 4
+  return_nuggets: false
+chain_helmet:
+  material: iron_ingot
+  durability: 165
+  ingot_cost: 5
+  return_nuggets: false
+chain_chestplate:
+  material: iron_ingot
+  durability: 240
+  ingot_cost: 8
+  return_nuggets: false
+chain_leggings:
+  material: iron_ingot
+  durability: 225
+  ingot_cost: 7
+  return_nuggets: false
+chain_boots:
+  material: iron_ingot
+  durability: 170
+  ingot_cost: 4
+  return_nuggets: false
+iron_helmet:
+  material: iron_ingot
+  durability: 165
+  ingot_cost: 5
+  return_nuggets: false
+iron_chestplate:
+  material: iron_ingot
+  durability: 240
+  ingot_cost: 8
+  return_nuggets: false
+iron_leggings:
+  material: iron_ingot
+  durability: 225
+  ingot_cost: 7
+  return_nuggets: false
+iron_boots:
+  material: iron_ingot
+  durability: 170
+  ingot_cost: 4
+  return_nuggets: false
+golden_helmet:
+  material: gold_ingot
+  durability: 77
+  ingot_cost: 5
+  return_nuggets: false
+golden_chestplate:
+  material: gold_ingot
+  durability: 112
+  ingot_cost: 8
+  return_nuggets: false
+golden_leggings:
+  material: gold_ingot
+  durability: 105
+  ingot_cost: 7
+  return_nuggets: false
+golden_boots:
+  material: gold_ingot
+  durability: 91
+  ingot_cost: 4
+  return_nuggets: false
+diamond_helmet:
+  material: diamond
+  durability: 363
+  ingot_cost: 5
+  return_nuggets: false
+diamond_chestplate:
+  material: diamond
+  durability: 528
+  ingot_cost: 8
+  return_nuggets: false
+diamond_leggings:
+  material: diamond
+  durability: 495
+  ingot_cost: 7
+  return_nuggets: false
+diamond_boots:
+  material: diamond
+  durability: 422
+  ingot_cost: 4
+  return_nuggets: false
