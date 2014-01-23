@@ -52,7 +52,7 @@ This is a set of commandhelper packages for use in my upcoming server.
 ***
 
 ### License:
-* You may download an use the code as-is, so long as the code is not used in a for-profit manner.
+* You may download and use the code as-is, so long as the code is not used in a for-profit manner.
 * You may modify the code and use the modification in any way you wish, even for profit.
 * Any modification of the code must be publicly distributed, under the same license.
 * You must give credit to me as the original author.
