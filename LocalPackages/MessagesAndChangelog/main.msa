@@ -1,0 +1,9 @@
+*:/changelog [$=''] = >>>
+	#get changelog from YAML file
+	@file = read('onjoinmsgandchangelog.yml')
+	@yml = yml_decode(@file)
+	msg(concat('Current version is: '), @yml['changelog']['version'])
+	foreach(@yml['changelog']['details'], @item, 
+		msg(concat('- ', @item))
+	)
+<<<
