@@ -1,9 +1,26 @@
 *:/changelog [$=''] = >>>
 	#get changelog from YAML file
-	@file = read('onjoinmsgandchangelog.yml')
+	@file = read('config.yml')
 	@yml = yml_decode(@file)
-	msg(concat('Current version is: '), @yml['changelog']['version'])
-	foreach(@yml['changelog']['details'], @item, 
-		msg(concat('- ', @item))
+	@current = @yml['version']
+	@i = 0
+	@keys = array_keys(@yml['changelog']['versions'])
+	msg(concat('Current version is: ',@current))
+	if(equals_ic($,'all'),
+		foreach(@yml['changelog']['versions'], @item,
+			msg(concat('Version: ', @keys[@i])) #@yml['changelog']['versions'][@keys[@i]]))
+			@i2 = 0
+			foreach(@item['details'],@line,
+				msg(concat('- ', string(@item['details'][@i2])))
+				@i2++
+			)
+			@i++
+		), #ELSE
+		@i2 = 0
+		@item = @yml['changelog']['versions'][@current]
+		foreach(@item['details'],@line,
+			msg(concat('- ',string(@item['details'][@i2])))
+			@i2++
+		)
 	)
 <<<

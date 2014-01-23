@@ -1,0 +1,13 @@
+motd: 'Welcome to Jessassins Zombie-SP'
+version: 0.0.1
+changelog:
+  versions:
+    0.0.1:
+      details:
+        - 'Changelog functionality updated'
+        - 'Added ability to "break down" items'
+        - 'Weapons, tools, and armor can be '
+        - ' melted down into their raw material form'
+    0.0.0:
+      details:
+        - 'Changelog added.'
