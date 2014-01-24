@@ -9,3 +9,5 @@
 # *:/balance $1 = msg(_acc_balance($1))
 
 # *:/bankbalance $1 = msg(_bacc_balance($1))
+
+# *:/add = _bacc_add('Jessassin',10)

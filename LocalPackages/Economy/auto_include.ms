@@ -35,3 +35,51 @@ proc(_bacc_balance,@username,
 	@balance = @query[0]['bank_balance']
 	return(@balance)
 )
+
+proc(_acc_add,@username,@amount,
+	@balance = _acc_balance(@username)
+	@set = @balance + @amount
+	_acc_set(@username,@set)
+)
+
+proc(_acc_subtract,@username,@amount,
+	@balance = _acc_balance(@username)
+	@set = @balance - @amount
+	_acc_set(@username,@set)
+)
+
+proc(_acc_multiply,@username,@amount,
+	@balance = _acc_balance(@username)
+	@set = @balance * @amount
+	_acc_set(@username,@set)
+)
+
+proc(_acc_divide,@username,@amount,
+	@balance = _acc_balance(@username)
+	@set = @balance / @amount
+	_acc_set(@username,@set)
+)
+
+proc(_bacc_add,@username,@amount,
+	@balance = _bacc_balance(@username)
+	@set = @balance + @amount
+	_bacc_set(@username,@set)
+)
+
+proc(_bacc_subtract,@username,@amount,
+	@balance = _bacc_balance(@username)
+	@set = @balance - @amount
+	_bacc_set(@username,@set)
+)
+
+proc(_bacc_multiply,@username,@amount,
+	@balance = _bacc_balance(@username)
+	@set = @balance * @amount
+	_bacc_set(@username,@set)
+)
+
+proc(_bacc_divide,@username,@amount,
+	@balance = _bacc_balance(@username)
+	@set = @balance / @amount
+	_bacc_set(@username,@set)
+)
