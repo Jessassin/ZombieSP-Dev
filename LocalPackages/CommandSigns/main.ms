@@ -1,5 +1,10 @@
 #binds to player interact, filters to interactions with "sign post" block only
-bind(player_interact, null, array(block: data_values('sign_post'),button: 'right', item: 0), @event,
+bind(player_interact, null, array(button: 'right', item: 0), @event,
+	@block = @event['block']
+	#it is not a sign, stop processing event
+	if(not(or(equals_ic(data_name(@block),'Sign Post'),equals_ic(data_name(@block),'Wall Sign'))),
+		return(),
+	)
 	#define ivars
 	@line1 = get_sign_text(@event['location'])[0]
 	@line2 = get_sign_text(@event['location'])[1]
