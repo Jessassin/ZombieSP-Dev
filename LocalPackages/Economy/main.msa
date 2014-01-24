@@ -1,0 +1,4 @@
+*:/balance [$=''] = >>>
+	msg(concat("You have a balance of: ", acc_balance(player())
+<<<
+*:/bal = call_alias('/balance')
