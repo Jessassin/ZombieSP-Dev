@@ -11,6 +11,7 @@ This is a set of commandhelper packages for use in my upcoming server.
 * Login handler (provides on-login events, and returns changable MOTD without server restart)
 * Loot boxes (players gain loot based on respawnable loot boxes)
 * In-game news / changelog
+* Item breakdown: Melt damaged armor/weapons for their original materials
 
 ***
 
@@ -23,7 +24,6 @@ This is a set of commandhelper packages for use in my upcoming server.
 * Rare weapons / armor spawning or rewards from mini-games
 * Experience system to allow for more health, faster mining, more damage, etc.
 * Leaderboards for money, experience, kills, etc.
-* Item breakdown: Melt damaged armor/weapons for their original materials
 * Item breakdown: Remove enchantment from an item to receive XP bottles (or some other item, idk)
 * Wallet system: Wallets can only carry a certain amount of money by default
 * Wallet system: Upgrade your wallet by breaking down leather armor dropped by zombies
