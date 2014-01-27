@@ -1,1 +1,28 @@
 *:/locate = broadcast(ploc(player()))
+
+*:/lootbox $action [$quality] =	>>>
+	if(not(pisop(player())),
+		die('Only OPs can run this command')
+	)
+	if(equals_ic($action,'info'),
+		@loc = sk_pos1(player())
+		msg(_lootbox_info(@loc))
+		die()
+	)
+	if(not(equals_ic($action,'create')),
+		if(not(equals_ic($action,'remove')),
+			die('Syntax: /lootbox <create/remove> <(quality) high/low>')
+		)
+	)
+	if(not(equals_ic($quality,'low')),
+		if(not(equals_ic($quality,'high')),
+			if(not(equals_ic($action,'remove')),
+				die('Syntax: /lootbox <create/remove> <(quality) high/low>')
+			)
+		)
+	)
+	@loc = sk_pos1(player())
+	_modify_lootbox(@loc,$action,$quality)
+<<<
+
+*:/test = msg(_get_all_ids('low'))
