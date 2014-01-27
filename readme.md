@@ -12,11 +12,13 @@ This is a set of commandhelper packages for use in my upcoming server.
 * Loot boxes (players gain loot based on respawnable loot boxes)
 * In-game news / changelog
 * Item breakdown: Melt damaged armor/weapons for their original materials
+* Econonomy system (banks / wallets)
 
 ***
 
 ### Upcoming features:
-* Econonomy system (banks / wallets)
+* Economy system (wallet limit)
+* Economy system (Wallet balance shown in XP bar)
 * Economy system (Purchase items from "admin" shops)
 * Economy system (Purchase items from "player" shops)
 * Economy system (Purchase shops / plots)
