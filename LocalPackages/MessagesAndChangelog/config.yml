@@ -2,6 +2,11 @@ motd: 'Welcome to Jessassins Zombie-SP'
 version: 0.0.1
 changelog:
   versions:
+    0.0.2:
+      details:
+        - 'Added economy backend'
+        - 'Changed loot boxes to SQL from YAML'
+        - 'misc other changes'
     0.0.1:
       details:
         - 'Changelog functionality updated'

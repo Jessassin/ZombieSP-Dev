@@ -8,7 +8,7 @@
 	msg(concat('Current version is: ',@current))
 	if(equals_ic($,'all'),
 		foreach(@yml['changelog']['versions'], @item,
-			msg(concat('Version: ', @keys[@i])) #@yml['changelog']['versions'][@keys[@i]]))
+			msg(concat('Version: ', @keys[@i]))
 			@i2 = 0
 			foreach(@item['details'],@line,
 				msg(concat('- ', string(@item['details'][@i2])))

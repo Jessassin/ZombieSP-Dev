@@ -1,11 +1,5 @@
 #procedure definitions go here
 
-# proc(_testdb,
-	# @username = player()
-	# @query = query('testserver', 'SELECT * FROM test.balances WHERE username = (?)', (@username))
-	# msg(@query)
-# )
-
 proc(_create_account,@player,
 	@query = query('testserver', 'SELECT * FROM test.balances WHERE username = (?)', (@player))
 	if(length(@query) < 1,

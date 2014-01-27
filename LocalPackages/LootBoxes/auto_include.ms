@@ -45,7 +45,6 @@ proc(_respawn_box_id,@id,
 		@id = '33:6'
 	)
 	set_block_at(@loc,@id)
-	broadcast(@loc)
 )
 
 proc(_format_location,@string,

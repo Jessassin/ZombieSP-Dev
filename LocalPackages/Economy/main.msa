@@ -1,13 +1,1 @@
 #commands go here
-
-# *:/testdb = _testdb()
-
-# *:/setacc $1 $2 = _acc_set($1,$2)
-
-# *:/setbacc $1 $2 = _bacc_set($1,$2)
-
-# *:/balance $1 = msg(_acc_balance($1))
-
-# *:/bankbalance $1 = msg(_bacc_balance($1))
-
-# *:/add = _bacc_add('Jessassin',10)
