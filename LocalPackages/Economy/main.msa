@@ -1,1 +1,40 @@
 #commands go here
+
+*:/wallet [$action=''] = >>>
+	if(length($action) < 3,
+		@action = 'help',
+		@action = $action
+	)
+	if(equals_ic(@action,'help'),
+		msg('Commands:')
+		msg('/wallet help - returns this message')
+		msg('/wallet upgrade - upgrades your wallet using leather from your inventory')
+		msg('/wallet size - tells you how much your wallet can hold')
+	)
+	if(equals_ic(@action,'upgrade'),
+		@qty = ptake_item(player(),data_values('leather'),1)
+		if(@qty > 0,
+			@newsize = _upgrade_wallet(player(),@qty)
+			msg(concat('Wallet upgraded!'))
+			msg(concat('Your wallet can now hold: $',@newsize)),
+			msg(concat('You need leather in your inventory to upgrade your wallet!'))
+		)
+	)
+	if(equals_ic(@action,'size'),
+		@size = _wallet_size(player())
+		msg(concat('Your wallet can currently hold: $',@size))
+	)
+<<<
+
+*:/bank [$action=''] = >>>
+
+<<<
+
+*:/balance [$player=''] = >>>
+	if(length($player) < 3,
+		@player = player(),
+		@player = $player
+	)
+	@balance = _bacc_balance(@player)
+	tmsg(player(),concat('Bank account balance for ',@player,': $',@balance))
+<<<
