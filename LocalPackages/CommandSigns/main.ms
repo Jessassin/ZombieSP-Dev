@@ -12,7 +12,7 @@ bind(player_interact, null, array(button: 'right', item: 0), @event,
 	@line4 = get_sign_text(@event['location'])[3]
 	#If line 1 is not a valid commandsign, break. !Note color!
 	if(not(equals(@line1,concat(color(a),'[CommandSign]'))),
-		break()
+		return()
 	)
 	#else try running command starting on line 2
 	try(run_cmd(concat(@line2,' ',@line3,' ',@line4)))
