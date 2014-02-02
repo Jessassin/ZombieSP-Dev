@@ -88,3 +88,13 @@ vip:
   suffix: '&b[VIP]'
   description: 'Exclusive rank for designated users'
   order: 18
+activebeta:
+  prefix: ''
+  suffix: '&b[ß]'
+  description: 'Active beta tester'
+  order: 19
+beta:
+  prefix: ''
+  suffix: '&7[ß]'
+  description: 'Previous beta tester'
+  order: 20

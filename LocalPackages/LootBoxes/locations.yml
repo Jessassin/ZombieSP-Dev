@@ -1,7 +1,0 @@
-#Format Locations: "x,y,z": Quality <high/low>
-high:
-  - 0,15,0
-  - 1,15,0
-  - 0,15,1
-low:
-  - 1,15,1

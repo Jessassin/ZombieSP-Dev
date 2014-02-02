@@ -1,1 +1,12 @@
-*:/ra = if(pisop(player()),sudo('/reloadaliases'),die(color(4),'OPS ONLY!'))
+*:/ra = >>>
+	#If run by console, reloadaliases and die
+	if(player() == '~console',
+		sudo('/reloadaliases') die(),
+		#else if player is op, reloadaliases
+		if(pisop(player()),
+			sudo('/reloadaliases'),
+			#else, die
+			die(color(4),'OPS ONLY!')
+		)
+	)
+<<<

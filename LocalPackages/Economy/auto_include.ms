@@ -1,15 +1,9 @@
 #procedure definitions go here
 
-# proc(_testdb,
-	# @username = player()
-	# @query = query('testserver', 'SELECT * FROM test.balances WHERE username = (?)', (@username))
-	# msg(@query)
-# )
-
 proc(_create_account,@player,
-	@query = query('testserver', 'SELECT * FROM test.balances WHERE username = (?)', (@player))
+	@query = query('testserver', 'SELECT * FROM balances WHERE username = (?)', (@player))
 	if(length(@query) < 1,
-		query('testserver', 'INSERT INTO test.balances (username, wallet_balance, bank_balance) VALUES (?,0,0)', (@player)),
+		query('testserver', 'INSERT INTO balances (username, wallet_balance, bank_balance) VALUES (?,0,0)', (@player)),
 		return()
 	)
 )
@@ -23,15 +17,13 @@ proc(_bacc_set,@username,@balance,
 )
 
 proc(_acc_balance,@username,
-	@query = query('testserver', 'SELECT * FROM test.balances WHERE username = (?)', @username)
-	#broadcast(@query[0])
+	@query = query('testserver', 'SELECT * FROM balances WHERE username = (?)', @username)
 	@balance = @query[0]['wallet_balance']
 	return(@balance)
 )
 
 proc(_bacc_balance,@username,
-	@query = query('testserver', 'SELECT * FROM test.balances WHERE username = (?)', @username)
-	#broadcast(@query[0])
+	@query = query('testserver', 'SELECT * FROM balances WHERE username = (?)', @username)
 	@balance = @query[0]['bank_balance']
 	return(@balance)
 )
