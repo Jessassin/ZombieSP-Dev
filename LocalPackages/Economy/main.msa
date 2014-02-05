@@ -1,6 +1,6 @@
 #commands go here
 
-*:/wallet [$action=''] = >>>
+*:/wallet [$action=''] [$=''] = >>>
 	if(length($action) < 3,
 		@action = 'help',
 		@action = $action
@@ -26,11 +26,11 @@
 	)
 <<<
 
-*:/bank [$action=''] = >>>
+*:/bank [$action=''] [$=''] = >>>
 
 <<<
 
-*:/balance [$player=''] = >>>
+*:/balance [$player=''] [$=''] = >>>
 	if(length($player) < 3,
 		@player = player(),
 		@player = $player

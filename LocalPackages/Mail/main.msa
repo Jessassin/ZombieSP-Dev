@@ -1,0 +1,31 @@
+#commands go here
+
+*:/mail [$action='help'] [$to=''] [$=''] = >>>
+	if(equals_ic(@action,'help'),
+		msg('Commands:')
+		msg('/mail help - returns this message')
+		msg('/mail read - read your mail')
+		msg('/mail clear - clears your mail')
+		msg('/mail send [to] [message] - send a message to the specified player')
+	)
+	if(equals_ic(@action,'read'),
+		_get_mail(player())
+	)
+	if(equals_ic(@action,'clear'),
+		_clear_mail(player())
+		msg('Mail was (or should have been) cleared.')
+	)
+	if(equals_ic(@action,'send'),
+		assign(@to, $to)
+		assign(@msg, $)
+		if(or(length(@to) < 1, length(@msg) < 1),
+			msg('You didn\'t specify either a player or a message.'),
+			_send_mail(player(), @to, @msg)
+		)
+		msg('Mail has (or should have been) sent.')
+	)
+	# Yes, I could have done an else with the other ifs, but the ifs else's are messy
+	if(not(or(equals_ic(@action,'help'), equals_ic(@action,'read'), equals_ic(@action,'clear'), equals_ic(@action,'send'))),
+		msg('Invalid action. Please see /mail help')
+	)
+<<<

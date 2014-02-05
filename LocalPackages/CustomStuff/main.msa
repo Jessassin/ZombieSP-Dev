@@ -1,4 +1,4 @@
-*:/ra = >>>
+*:/ra [$=''] = >>>
 	#If run by console, reloadaliases and die
 	if(player() == '~console',
 		sudo('/reloadaliases') die(),

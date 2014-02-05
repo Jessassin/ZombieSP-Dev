@@ -1,4 +1,4 @@
-*:/ranks = >>>
+*:/ranks [$=''] = >>>
 	@file = read('rankconfig.yml')
 	@yml = yml_decode(@file)
 	@rankcount = length(@yml)
