@@ -1,6 +1,6 @@
-*:/locate = broadcast(ploc(player()))
+*:/locate [$=''] = broadcast(ploc(player()))
 
-*:/lootbox $action [$quality] =	>>>
+*:/lootbox $action [$quality] [$=''] =	>>>
 	if(not(pisop(player())),
 		die('Only OPs can run this command')
 	)
@@ -25,4 +25,4 @@
 	_modify_lootbox(@loc,$action,$quality)
 <<<
 
-*:/test = msg(_get_all_ids('low'))
+*:/test [$=''] = msg(_get_all_ids('low'))
