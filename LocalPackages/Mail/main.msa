@@ -11,7 +11,7 @@
 	if(equals_ic(@action,'read'),
 		_get_mail(player())
 	)
-	if(equals_ic(@action,'read'),
+	if(equals_ic(@action,'clear'),
 		_clear_mail(player())
 		msg('Mail was (or should have been) cleared.')
 	)
@@ -23,5 +23,9 @@
 			_send_mail(player(), @to, @msg)
 		)
 		msg('Mail has (or should have been) sent.')
+	)
+	# Yes, I could have done an else with the other ifs, but the ifs else's are messy
+	if(not(or(equals_ic(@action,'help'), equals_ic(@action,'read'), equals_ic(@action,'clear'), equals_ic(@action,'send'))),
+		msg('Invalid action. Please see /mail help')
 	)
 <<<
