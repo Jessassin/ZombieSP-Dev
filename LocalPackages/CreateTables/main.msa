@@ -1,6 +1,9 @@
 #commands go here
 
 *:/createtable $name = >>>
+if(player() == '~console',
+	_create_table($name)
+)
 if(pisop(player()),
 	_create_table($name),
 	die('OPs only!')
