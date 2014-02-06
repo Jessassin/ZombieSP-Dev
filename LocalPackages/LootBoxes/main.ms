@@ -1,7 +1,10 @@
 _respawn_tick_start()
 
-bind(player_interact,null,array(block: '33:6','33:7'),@event,
-	#broadcast(@event['location'])
+bind(player_interact,null,array(block: '33'),@event,
+	@damage = reg_split(':',@event['block'])[1]
+	if(not(or(equals(@damage,6),equals(@damage,7))),
+		return()
+	)
 	@file = read('config.yml')
 	@yml = yml_decode(@file)
 	set_block_at(@event['location'],0)
