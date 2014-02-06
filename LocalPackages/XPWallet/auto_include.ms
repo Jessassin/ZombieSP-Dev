@@ -2,13 +2,13 @@
 
 proc(_update_moneycount,
 	foreach(all_players(),@p,
-		# wallet max (only syncs every 10 seconds
+		# wallet max
 		if(has_value(concat('economy.wallet.max.', @p),
 			@wsize = get_value(concat('economy.wallet.max.balance.', @p)),
 			@wsize = _wallet_size(@p)
 			store_value(concat('economy.wallet.max.', @p), @wsize)
 		)
-		# wallet balance (only syncs every 3 seconds)
+		# wallet balance
 		if(has_value(concat('economy.wallet.balance.', @p),
 			@bal = get_value(concat('economy.wallet.balance.', @p)),
 			@bal = _acc_balance(@p)
@@ -16,7 +16,7 @@ proc(_update_moneycount,
 		)
 		
 		@percent = divide(@wsize,100)
-		# moved balance > max check to where it gets set instead of here
+		# moved balance > max check to where it gets set (_acc_set()) instead of here
 		set_plevel(@p,round(@bal))
 		set_pexp(@p,round(divide(@bal,@percent)))
 	)
