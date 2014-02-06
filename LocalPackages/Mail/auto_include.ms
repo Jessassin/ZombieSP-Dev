@@ -8,7 +8,7 @@ proc(_get_mail_count, @player,
 proc(_get_mail, @player,
 	@query = query('testserver', 'SELECT * FROM mail WHERE to = (?)', (@player))
 	for(assign(@i, 0), @i < length(@query), @i++,
-		tmsg(@player, concat(@query[@i]['from']), ": ", @query[@i]['message'])
+		tmsg(@player, concat(@query[@i]['from']), ': ', @query[@i]['message'])
 	)
 )
 
