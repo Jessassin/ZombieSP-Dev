@@ -40,7 +40,7 @@ proc(_respawn_box_id,@id,
 	@query = @query[0]
 	@loc = array(@query[x],@query[y],@query[z],'world')
 	@quality = @query[quality]
-	if(@quality = 1,
+	if(@quality == 1,
 		@id = '33:7',
 		@id = '33:6'
 	)
