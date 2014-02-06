@@ -1,0 +1,8 @@
+#commands go here
+
+*:/createtable $name = >>>
+if(pisop(player()),
+	_create_table($name),
+	die('OPs only!')
+)
+<<<
