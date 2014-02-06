@@ -24,4 +24,5 @@ proc(_singplural, @num,
 	if(equals(@num, 1),
 		return(''),
 		return('s')
+	)
 )
