@@ -3,8 +3,7 @@
 proc(_create_account,@player,
 	@query = query('testserver', 'SELECT * FROM balances WHERE username = (?)', (@player))
 	if(length(@query) < 1,
-		query('testserver', 'INSERT INTO balances (username, wallet_balance, bank_balance) VALUES (?,0,0)', (@player)),
-		return()
+		query('testserver', 'INSERT INTO balances (username, wallet_balance, bank_balance) VALUES (?,0,0)', (@player))
 	)
 )
 
@@ -17,13 +16,13 @@ proc(_bacc_set,@username,@balance,
 )
 
 proc(_acc_balance,@username,
-	@query = query('testserver', 'SELECT * FROM balances WHERE username = (?)', @username)
+	@query = query('testserver', 'SELECT wallet_balance FROM balances WHERE username = (?)', @username)
 	@balance = @query[0]['wallet_balance']
 	return(@balance)
 )
 
 proc(_bacc_balance,@username,
-	@query = query('testserver', 'SELECT * FROM balances WHERE username = (?)', @username)
+	@query = query('testserver', 'SELECT bank_balance FROM balances WHERE username = (?)', @username)
 	@balance = @query[0]['bank_balance']
 	return(@balance)
 )
