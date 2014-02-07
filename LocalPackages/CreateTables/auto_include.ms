@@ -51,6 +51,8 @@ proc(_create_player_meta,
   PRIMARY KEY (`username`),
   UNIQUE KEY `username_UNIQUE` (`username`)
 	) ENGINE=InnoDB DEFAULT CHARSET=utf8;')
+	query('testserver','ALTER TABLE `player_meta` 
+	ADD COLUMN `premium` TINYINT(1) NOT NULL DEFAULT 0 AFTER `wallet_size`;')
 )
 
 proc(_create_mail,
