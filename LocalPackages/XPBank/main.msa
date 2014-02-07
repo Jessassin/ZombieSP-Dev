@@ -1,0 +1,26 @@
+#commands go here
+
+*:/bank [$action='help'] [$='0'] = >>>
+	#actions deposit, withdraw, balance, premium
+	@player = player()
+	if(equals_ic($action, 'deposit'),
+		_bank_deposit(@player,$)
+		die()
+	)
+	if(equals_ic($action, 'withdraw'),
+		_bank_withdraw(@player,$)
+		die()		
+	)
+	if(equals_ic($action, 'balance'),
+		msg(concat('Current bank balance: $',_bank_balance(@player)))
+		die()
+	)
+	if(equals_ic($action, 'premium'),
+		_bank_premium_upgrade(@player)
+		die()
+	)
+	msg('/bank <help> - returns this message')
+	msg('/bank <deposit/withdraw> <amount>')
+	msg('/bank <balance> - returns bank balance')
+	msg('/bank <premium> - upgrades to premium account')
+<<<
