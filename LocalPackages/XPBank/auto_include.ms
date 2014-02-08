@@ -1,6 +1,11 @@
 #procedure definitions go here
 
 proc(_bank_deposit,@player,@amt,
+	if(not(is_numeric(@amt)),
+		if(equals_ic(@amt,'all'),
+			@amt = _acc_balance(@player)
+		)
+	)
 	if(_acc_balance(@player) < @amt,
 		die(concat('You do not have $',@amt,' to deposit!'))
 	)
@@ -12,6 +17,11 @@ proc(_bank_deposit,@player,@amt,
 )
 
 proc(_bank_withdraw,@player,@amt,
+	if(not(is_numeric(@amt)),
+		if(equals_ic(@amt,'all'),
+			@amt = _bacc_balance(@player)
+		)
+	)
 	if(_bacc_balance(@player) < @amt,
 		die(concat('You do not have $',@amt,' to withdraw!'))
 	)
