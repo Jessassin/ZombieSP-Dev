@@ -4,7 +4,7 @@ proc(_bank_deposit,@player,@amt,
 	if(not(is_numeric(@amt)),
 		if(equals_ic(@amt,'all'),
 			@amt = _acc_balance(@player),
-			die(concat(@amt,' is not a valid amount'))
+			die(concat('"',@amt,'"',' is not a valid amount'))
 		)
 	)
 	if(_acc_balance(@player) < @amt,
@@ -21,7 +21,7 @@ proc(_bank_withdraw,@player,@amt,
 	if(not(is_numeric(@amt)),
 		if(equals_ic(@amt,'all'),
 			@amt = _bacc_balance(@player),
-			die(concat(@amt,' is not a valid amount'))
+			die(concat('"',@amt,'"',' is not a valid amount'))
 		)
 	)
 	if(_bacc_balance(@player) < @amt,
