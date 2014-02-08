@@ -3,6 +3,7 @@
 *:/createtable $name = >>>
 if(player() == '~console',
 	_create_table($name)
+	die()
 )
 if(pisop(player()),
 	_create_table($name),
