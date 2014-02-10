@@ -1,6 +1,10 @@
 #binds go in here
 
-bind(entity_damage, null, array(cause: ENTITY_ATTACK), @event,
+bind(entity_damage, null, null, @event,
+	#Check if is ENTITY_ATTACK or PROJECTILE
+	if(not(or(@event[cause] == 'ENTITY_ATTACK', @event[cause] == 'PROJECTILE')),
+		die()
+	)
 	#If it is damage dealt to a player, die. Prevents trying to give money to mobs
 	if(@event[type] == 'PLAYER',
 		die()
@@ -10,7 +14,10 @@ bind(entity_damage, null, array(cause: ENTITY_ATTACK), @event,
 		die()
 	)
 	#assign variables
-	assign(@player,@event[damager])
+	if(@event['cause'] == 'ENTITY_ATTACK',
+		assign(@player,@event[damager]),
+		assign(@player,@event[shooter])
+	)
 	assign(@damage,@event[amount])
 	#get random number between 1 and 7
 	assign(@random,rand(1,7))
