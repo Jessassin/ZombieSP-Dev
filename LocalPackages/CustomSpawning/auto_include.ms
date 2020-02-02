@@ -1,4 +1,4 @@
-proc(_spawn_mob,@type,@count,@locarray,
+proc('_spawn_mob',@type,@count,@locarray,
 	#read config file
 	@file = read('spawnconditions.yml')
 	@yml = yml_decode(@file)

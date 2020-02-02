@@ -1,6 +1,6 @@
 #procedure definitions go here
 
-proc(_create_table,@tablename,
+proc('_create_table',@tablename,
 	@tables = array('balances','lootboxes',' player_meta','mail')
 	if(@tablename == @tables[0],
 		_create_balances()
@@ -22,7 +22,7 @@ proc(_create_table,@tablename,
 	)
 )
 
-proc(_create_balances,
+proc('_create_balances',
 	query('testserver','CREATE TABLE IF NOT EXISTS `balances` (
   `username` varchar(16) NOT NULL,
   `wallet_balance` decimal(15,2) NOT NULL DEFAULT \'0.00\',
@@ -31,7 +31,7 @@ proc(_create_balances,
 	) ENGINE=MyISAM DEFAULT CHARSET=utf8;')
 )
 
-proc(_create_lootboxes,
+proc('_create_lootboxes',
 	query('testserver','CREATE TABLE IF NOT EXISTS `lootboxes` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `x` int(8) DEFAULT NULL,
@@ -44,7 +44,7 @@ proc(_create_lootboxes,
 	) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;')
 )
 
-proc(_create_player_meta,
+proc('_create_player_meta',
 	query('testserver','CREATE TABLE IF NOT EXISTS `player_meta` (
   `username` varchar(16) NOT NULL,
   `wallet_size` int(6) NOT NULL DEFAULT \'1\',
@@ -55,7 +55,7 @@ proc(_create_player_meta,
 	ADD COLUMN `premium` TINYINT(1) NOT NULL DEFAULT 0 AFTER `wallet_size`;')
 )
 
-proc(_create_mail,
+proc('_create_mail',
 	query('testserver','CREATE TABLE IF NOT EXISTS `mail` (
   `ID` INT NOT NULL AUTO_INCREMENT,
   `sender` VARCHAR(16) NOT NULL,

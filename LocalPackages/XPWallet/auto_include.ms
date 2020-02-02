@@ -1,6 +1,6 @@
 #procedure definitions go here
 
-proc(_update_moneycount,
+proc('_update_moneycount',
 	foreach(all_players(),@p,
 		@wsize = _wallet_size(@p)
 		@percent = divide(@wsize,100)
@@ -16,7 +16,7 @@ proc(_update_moneycount,
 )
 
 #given player, returns wallet size
-proc(_wallet_size,@player,
+proc('_wallet_size',@player,
 	#wallet size = 250 * stored value
 	#i.e. if stored value is 3, wallet size is $750
 	@query = query('testserver', 'SELECT wallet_size FROM player_meta WHERE username=?', @player)
@@ -25,11 +25,11 @@ proc(_wallet_size,@player,
 		query('testserver', 'INSERT INTO player_meta (username) VALUES (?)', @player)
 		@query = query('testserver', 'SELECT wallet_size FROM player_meta WHERE username=?', @player)
 	)
-	@wsize = @query[0][wallet_size] * 250
+	@wsize = @query[0]['wallet_size'] * 250
 	return(@wsize)
 )
 
-proc(_upgrade_wallet,@player,@amount,
+proc('_upgrade_wallet',@player,@amount,
 	if(@amount < 1,
 		return()
 	)

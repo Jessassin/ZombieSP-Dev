@@ -1,6 +1,6 @@
 #procedure definitions go here
 
-proc(_bank_deposit,@player,@amt,
+proc('_bank_deposit',@player,@amt,
 	if(not(is_numeric(@amt)),
 		if(equals_ic(@amt,'all'),
 			@amt = _acc_balance(@player),
@@ -17,7 +17,7 @@ proc(_bank_deposit,@player,@amt,
 	tmsg(@player,concat('Bank balance: $',_bacc_balance(@player)))
 )
 
-proc(_bank_withdraw,@player,@amt,
+proc('_bank_withdraw',@player,@amt,
 	if(not(is_numeric(@amt)),
 		if(equals_ic(@amt,'all'),
 			@amt = _bacc_balance(@player),
@@ -34,11 +34,11 @@ proc(_bank_withdraw,@player,@amt,
 	tmsg(@player,concat('Bank balance: $',_bacc_balance(@player)))
 )
 
-proc(_bank_balance,@player,
+proc('_bank_balance',@player,
 	return(_bacc_balance(@player))
 )
 
-proc(_bank_premium_upgrade,@player,
+proc('_bank_premium_upgrade',@player,
 	if(_account_is_premium(@player),
 		tmsg(@player,concat('Your account is already premium!'))
 		return()
@@ -52,7 +52,7 @@ proc(_bank_premium_upgrade,@player,
 	tmsg(@player,concat('You have upgraded your account to a premium account!'))
 )
 
-proc(_account_is_premium,@player,
+proc('_account_is_premium',@player,
 	@premium = query('testserver','SELECT premium FROM player_meta WHERE username = (?)',@player)[0]['premium']
 	return(@premium)
 )

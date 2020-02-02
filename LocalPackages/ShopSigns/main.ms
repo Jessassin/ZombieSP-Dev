@@ -1,6 +1,6 @@
 #binds go in here
 
-bind(player_interact, null, null, @event,
+bind('player_interact', null, null, @event,
 	@block = @event['block']
 	#it is not a sign, stop processing event
 	if(not(or(equals_ic(data_name(@block),'Sign Post'),equals_ic(data_name(@block),'Wall Sign'))),
@@ -36,7 +36,7 @@ bind(player_interact, null, null, @event,
 	)
 )
 
-bind(sign_changed, null, null, @event,
+bind('sign_changed', null, null, @event,
 	#pull text into ivar
 	@text = @event['text']
 	#if line 1 is command sign text,  cancel event, and then run op check 
@@ -68,7 +68,7 @@ bind(sign_changed, null, null, @event,
 		@line4 = replace(@text[3],'$','')
 		@line4 = concat('$',@line4)
 		if(@valid,
-			tmsg(@event['player'],concat(color(a),'Buy sign created!'))
+			tmsg(@event['player'],concat(color('a'),'Buy sign created!'))
 			@line1 = '&a[Buy]',
 			tmsg(@event['player'],concat(color(4),'Buy sign invalid!'))
 			@line1 = '&4[Buy]'
@@ -103,7 +103,7 @@ bind(sign_changed, null, null, @event,
 		@line4 = replace(@text[3],'$','')
 		@line4 = concat('$',@line4)
 		if(@valid,
-			tmsg(@event['player'],concat(color(a),'Sell sign created!'))
+			tmsg(@event['player'],concat(color('a'),'Sell sign created!'))
 			@line1 = '&a[Sell]',
 			tmsg(@event['player'],concat(color(4),'Sell sign invalid!'))
 			@line1 = '&4[Sell]'

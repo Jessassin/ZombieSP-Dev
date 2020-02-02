@@ -1,4 +1,4 @@
-bind(player_interact,null,array(block: data_values(Flower_pot)),@event,
+bind('player_interact',null,array(block: data_values('Flower_pot')),@event,
 	cancel()
 	@yml = yml_decode(read('config.yml'))
 	@item = @event['item']

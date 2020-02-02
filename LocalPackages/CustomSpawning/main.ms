@@ -1,4 +1,4 @@
-bind(creature_spawn,null,null,@event,
+bind('creature_spawn',null,null,@event,
 	@file = read('spawnconditions.yml')
 	@yml = yml_decode(@file)
 	@id = @event['id']

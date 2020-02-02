@@ -1,6 +1,6 @@
 _respawn_tick_start()
 
-bind(player_interact,null,array(block: '33'),@event,
+bind('player_interact',null,array(block: '33'),@event,
 	@damage = reg_split(':',@event['block'])[1]
 	if(not(or(equals(@damage,6),equals(@damage,7))),
 		return()

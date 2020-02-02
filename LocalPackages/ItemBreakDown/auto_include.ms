@@ -1,4 +1,4 @@
-proc(_melt_item,@itemname,@player,
+proc('_melt_item',@itemname,@player,
 	@yml = yml_decode(read('config.yml'))
 	@itemsettings = @yml[to_lower(@itemname)]
 	@selecteditem = pinv(@player,null)
