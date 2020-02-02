@@ -1,4 +1,4 @@
-proc(_respawn_tick_start,
+proc('_respawn_tick_start',
 	@settings = yml_decode(read('config.yml'))['settings']
 	@lowinterval = @settings['low']['respawn-interval']
 	@highinterval = @settings['high']['respawn-interval']
@@ -12,7 +12,7 @@ proc(_respawn_tick_start,
 	)
 )
 
-proc(_respawn_boxes,@quality,@all,
+proc('_respawn_boxes',@quality,@all,
 	if(@quality == 'high',
 		if(@all,
 			@ids = _get_all_ids('high')
@@ -35,11 +35,11 @@ proc(_respawn_boxes,@quality,@all,
 	)
 )
 
-proc(_respawn_box_id,@id,
+proc('_respawn_box_id',@id,
 	@query = query('testserver', 'SELECT x,y,z,quality FROM lootboxes WHERE id=?', @id)
 	@query = @query[0]
-	@loc = array(@query[x],@query[y],@query[z],'world')
-	@quality = @query[quality]
+	@loc = array(@query['x'],@query['y'],@query['z'],'world')
+	@quality = @query['quality']
 	if(@quality == 1,
 		@id = '33:7',
 		@id = '33:6'
@@ -47,13 +47,13 @@ proc(_respawn_box_id,@id,
 	set_block_at(@loc,@id)
 )
 
-proc(_format_location,@string,
+proc('_format_location',@string,
 	@loc = reg_split(',',@string)
 	array_set(@loc,3,'world')
 	return(@loc)
 )
 
-proc(_modify_lootbox,@location,@action,@quality,
+proc('_modify_lootbox',@location,@action,@quality,
 	@x = @location[0]
 	@y = @location[1]
 	@z = @location[2]
@@ -65,7 +65,7 @@ proc(_modify_lootbox,@location,@action,@quality,
 	if(length(@query) == 0,
 		@exists = false,
 		@exists = true
-		@id = @query[0][ID]
+		@id = @query[0]['ID']
 	)
 	if(equals_ic(@action,'create'),
 		if(@exists,
@@ -80,7 +80,7 @@ proc(_modify_lootbox,@location,@action,@quality,
 	)
 )
 
-proc(_lootbox_info,@loc,
+proc('_lootbox_info',@loc,
 	@x = @loc[0]
 	@y = @loc[1]
 	@z = @loc[2]
@@ -102,7 +102,7 @@ proc(_lootbox_info,@loc,
 	return(@return)
 )
 
-proc(_get_all_ids,@quality,
+proc('_get_all_ids',@quality,
 	if(equals_ic(@quality,'high'),
 		@quality = 1,
 		@quality = 0
@@ -115,7 +115,7 @@ proc(_get_all_ids,@quality,
 	return(@ids)
 )
 
-proc(_get_rand_id,@quality,
+proc('_get_rand_id',@quality,
 	if(equals_ic(@quality,'high'),
 		@quality = 1,
 		@quality = 0

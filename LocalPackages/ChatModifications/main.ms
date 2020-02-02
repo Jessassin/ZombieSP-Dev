@@ -1,4 +1,4 @@
-bind(player_chat,null,null,@event,
+bind('player_chat',null,null,@event,
 	@file = read('rankconfig.yml')
 	@yml = yml_decode(@file)
 	@prefix = ''
