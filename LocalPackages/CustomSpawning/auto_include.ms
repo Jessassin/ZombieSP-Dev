@@ -14,6 +14,6 @@ proc('_spawn_mob',@type,@count,@locarray,
 		)
 	)
 	#sets @id to the entity id of the spawned mob (since array is returned [0] is specified)
-	@id = spawn_mob(@type,@count,@locarray)[0]
+	@id = spawn_entity(@type,@count,@locarray)[0]
 	set_mob_equipment(@id,@equipment)
 )
