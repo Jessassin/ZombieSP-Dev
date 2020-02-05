@@ -120,7 +120,7 @@ chain_leggings:
   return_nuggets: false
 chain_boots:
   material: iron_ingot
-  durability: 170
+  durability: 195
   ingot_cost: 4
   return_nuggets: false
 iron_helmet:
@@ -140,7 +140,7 @@ iron_leggings:
   return_nuggets: false
 iron_boots:
   material: iron_ingot
-  durability: 170
+  durability: 195
   ingot_cost: 4
   return_nuggets: false
 golden_helmet:
@@ -180,6 +180,6 @@ diamond_leggings:
   return_nuggets: false
 diamond_boots:
   material: diamond
-  durability: 422
+  durability: 429
   ingot_cost: 4
   return_nuggets: false
