@@ -10,8 +10,8 @@ proc('_update_moneycount',
 			tmsg(@p,'Open a bank account to deposit excess money.')
 			_acc_set(@p,@wsize)
 		)
-		set_plevel(@p,round(_acc_balance(@p)))
-		set_pexp(@p,round(divide(_acc_balance(@p),@percent)))
+		set_plevel(@p,integer(round(_acc_balance(@p))))
+		set_pexp(@p,integer(round(divide(_acc_balance(@p),@percent))))
 	)
 )
 
