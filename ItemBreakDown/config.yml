@@ -90,7 +90,7 @@ leather_helmet:
   return_nuggets: false
 leather_chestplate:
   material: leather
-  durability: 78
+  durability: 80
   ingot_cost: 8
   return_nuggets: false
 leather_leggings:
