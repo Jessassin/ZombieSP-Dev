@@ -1,8 +1,8 @@
 proc('_melt_item',@itemname,@player,
 	@yml = yml_decode(read('config.yml'))
 	@itemsettings = @yml[to_lower(@itemname)]
-	@selecteditem = pinv(@player,null)
-	@damage = @selecteditem['data']
+	@selecteditem = pinv(@player,pheld_slot())
+	@damage = @selecteditem['meta']['damage']
 	@durability = @itemsettings['durability']
 	@damagepercent = @damage / @durability * 100
 	@ingot_cost = @itemsettings['ingot_cost']
