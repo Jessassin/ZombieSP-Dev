@@ -11,6 +11,10 @@ proc('_melt_item',@itemname,@player,
 	@damagepercent = @damage / @durability * 100
 	@ingot_cost = @itemsettings['ingot_cost']
 	@returningots = floor(@ingot_cost - ((@damagepercent / 100) * @ingot_cost))
-	ptake_item(@player,@selecteditem)
-	pgive_item(@player,data_values(@itemsettings['material']),@returningots)
+	if(@returningots == 0) {
+		die("Breaking this down would return no materials!")
+	} else {
+		ptake_item(@player,@selecteditem)
+		pgive_item(@player,data_values(@itemsettings['material']),@returningots)
+	}
 )
