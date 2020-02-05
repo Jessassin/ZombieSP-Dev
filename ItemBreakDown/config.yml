@@ -103,22 +103,22 @@ leather_boots:
   durability: 65
   ingot_cost: 4
   return_nuggets: false
-chain_helmet:
+chainmail_helmet:
   material: iron_ingot
   durability: 165
   ingot_cost: 5
   return_nuggets: false
-chain_chestplate:
+chainmail_chestplate:
   material: iron_ingot
   durability: 240
   ingot_cost: 8
   return_nuggets: false
-chain_leggings:
+chainmail_leggings:
   material: iron_ingot
   durability: 225
   ingot_cost: 7
   return_nuggets: false
-chain_boots:
+chainmail_boots:
   material: iron_ingot
   durability: 195
   ingot_cost: 4
