@@ -18,7 +18,7 @@ proc('_bacc_set',@username,@balance,
 proc('_acc_balance',@username,
 	@query = query('testserver', 'SELECT wallet_balance FROM balances WHERE username = (?)', @username)
 	@balance = @query[0]['wallet_balance']
-	return(@balance)
+	return(integer(@balance))
 )
 
 proc('_bacc_balance',@username,
