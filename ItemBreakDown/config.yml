@@ -83,17 +83,17 @@ diamond_hoe:
   return_nuggets: false
 
 #armor
-leather_cap:
+leather_helmet:
   material: leather
   durability: 55
   ingot_cost: 5
   return_nuggets: false
-leather_tunic:
+leather_chestplate:
   material: leather
   durability: 78
   ingot_cost: 8
   return_nuggets: false
-leather_pants:
+leather_leggings:
   material: leather
   durability: 75
   ingot_cost: 7
