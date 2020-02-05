@@ -15,9 +15,9 @@ proc('_create_table',@tablename,
 		_create_mail()
 	)
 	if(@tablename == 'alltables',
-		_create_balances()		
-		_create_lootboxes()		
-		_create_player_meta()		
+		_create_balances()
+		_create_lootboxes()
+		_create_player_meta()
 		_create_mail()
 	)
 )
