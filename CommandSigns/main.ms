@@ -1,5 +1,5 @@
 #binds to player interact, filters to interactions with "sign post" block only
-bind('player_interact', null, array(button: 'right', item: 0, hand: 'main_hand'), @event) {
+bind('player_interact', null, array(button: 'right', itemname: 'AIR', hand: 'main_hand'), @event) {
 	@block = @event['block']
 	#it is not a sign, stop processing event
 	if(!string_ends_with(@event['block'],'SIGN')) {
