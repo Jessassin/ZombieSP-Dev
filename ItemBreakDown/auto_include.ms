@@ -15,6 +15,6 @@ proc('_melt_item',@itemname,@player,
 		die("Breaking this down would return no materials!")
 	} else {
 		ptake_item(@player,@selecteditem)
-		pgive_item(@player,data_values(@itemsettings['material']),@returningots)
+		pgive_item(@player,array(name: @itemsettings['material'], qty: @returningots))
 	}
 )
