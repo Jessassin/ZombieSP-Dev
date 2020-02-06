@@ -1,8 +1,3 @@
-#allow-unknowns: allow spawning of mobs if the type is not defined (currently not implemented, spawning cancelled by default)
-
-settings:
-  allow-unknowns: false
-  
 #enabled = whether or not to allow spawning of specific mob (overrides all other settings)
 #natural = whether or not to allow spawning via natural means (low light level for mobs, low chance grass spawn for animals)
 #spawner_egg = whether or not to allow spawning via spawn eggs
@@ -29,8 +24,8 @@ mobs:
     jockey: true
     reinforcements: false
     village_invasion: false
-    babychance: 100
-    villagerchance: 100
+    babychance: 100 #TODO: FIX THIS
+    villagerchance: 100 #TODO: FIX THIS
   SKELETON:
     enabled: false
     natural: false
@@ -44,10 +39,11 @@ mobs:
     spawner: false
     jockey: false
   SLIME:
-    enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    enabled: true
+    natural: true
+    spawner_egg: true
+    spawner: true
+    slime_split: true
   ENDERMAN:
     enabled: false
     natural: false
@@ -84,13 +80,13 @@ mobs:
     spawner_egg: false
     spawner: false
     jockey: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
   COW:
     enabled: false
     natural: false
     spawner_egg: false
     spawner: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
   ENDERDRAGON:
     enabled: false
     natural: false
@@ -111,7 +107,7 @@ mobs:
     natural: false
     spawner_egg: false
     spawner: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
   IRONGOLEM:
     enabled: false
     natural: false
@@ -127,31 +123,31 @@ mobs:
     natural: false
     spawner_egg: false
     spawner: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
   OCELOT:
     enabled: false
     natural: false
     spawner_egg: false
     spawner: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
   PIG:
     enabled: false
     natural: false
     spawner_egg: false
     spawner: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
   PIGZOMBIE:
     enabled: false
     natural: false
     spawner_egg: false
     spawner: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
   SHEEP:
     enabled: false
     natural: false
     spawner_egg: false
     spawner: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
   SNOWGOLEM:
     enabled: false
     natural: false
@@ -171,7 +167,7 @@ mobs:
     natural: false
     spawner_egg: false
     spawner: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
   WITHER_SKULL:
     enabled: false
     natural: false
@@ -182,7 +178,7 @@ mobs:
     natural: false
     spawner_egg: false
     spawner: false
-    babychance: 100
+    babychance: 100 #TODO: FIX THIS
 
 #Custom equipment spawning
 equipment: 
