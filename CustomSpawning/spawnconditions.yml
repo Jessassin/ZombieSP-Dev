@@ -1,7 +1,7 @@
 #enabled = whether or not to allow spawning of specific mob (overrides all other settings)
-#natural = whether or not to allow spawning via natural means (low light level for mobs, low chance grass spawn for animals)
-#spawner_egg = whether or not to allow spawning via spawn eggs
-#spawner = whether or not to allow spawning via spawners
+#NATURAL = whether or not to allow spawning via NATURAL means (low light level for mobs, low chance grass spawn for animals)
+#SPAWNER_EGG = whether or not to allow spawning via spawn eggs
+#SPAWNER = whether or not to allow spawning via SPAWNERs
 #jockey = whether or not to allow jockey spawning (skeletons on spiders, baby zombies on chickens)
 #reinforcements = whether or not to allow spawning via 1.7's "reinforcements" or "social zombies" feature
 #village_invasion = whether or not to allow spawning of zombies for the "village invasion" event
@@ -13,14 +13,14 @@
 mobs:
   CREEPER:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   ZOMBIE:
     enabled: true
-    natural: true
-    spawner_egg: true
-    spawner: true
+    NATURAL: true
+    SPAWNER_EGG: true
+    SPAWNER: true
     jockey: true
     reinforcements: false
     village_invasion: false
@@ -28,156 +28,156 @@ mobs:
     villagerchance: 100 #TODO: FIX THIS
   SKELETON:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     jockey: false
   SPIDER:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     jockey: false
   SLIME:
     enabled: true
-    natural: true
-    spawner_egg: true
-    spawner: true
-    slime_split: true
+    NATURAL: true
+    SPAWNER_EGG: true
+    SPAWNER: true
+    SLIME_SPLIT: true
   ENDERMAN:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   WITCH:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   SILVERFISH:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   CAVESPIDER:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   BAT:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   BLAZE:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   CHICKEN:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     jockey: false
     babychance: 100 #TODO: FIX THIS
   COW:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     babychance: 100 #TODO: FIX THIS
   ENDERDRAGON:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   GHAST:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   GIANT:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   HORSE:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     babychance: 100 #TODO: FIX THIS
   IRONGOLEM:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   MAGMACUBE:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   MOOSHROOM:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     babychance: 100 #TODO: FIX THIS
   OCELOT:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     babychance: 100 #TODO: FIX THIS
   PIG:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     babychance: 100 #TODO: FIX THIS
   PIGZOMBIE:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     babychance: 100 #TODO: FIX THIS
   SHEEP:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     babychance: 100 #TODO: FIX THIS
   SNOWGOLEM:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   SPIDERJOCKEY:
     enabled: false
-    natural: false
-    spawner: false
+    NATURAL: false
+    SPAWNER: false
   SQUID:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   VILLAGER:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     babychance: 100 #TODO: FIX THIS
   WITHER_SKULL:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
   WOLF:
     enabled: false
-    natural: false
-    spawner_egg: false
-    spawner: false
+    NATURAL: false
+    SPAWNER_EGG: false
+    SPAWNER: false
     babychance: 100 #TODO: FIX THIS
 
 #Custom equipment spawning

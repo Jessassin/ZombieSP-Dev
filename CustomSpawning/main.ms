@@ -15,21 +15,21 @@ bind('creature_spawn',null,null,@event,
 	if(array_index_exists(@mobs,@event['type'])) {
 		assign(@condition,@mobs[@event['type']])
 	} else {
-		console(concat('The specified mob type: ',@event['type'],' is not defined in spawnconditions.yml'))
+		console('The specified mob type: '.@event['type'].' is not defined in spawnconditions.yml')
 		return()
 	}
 
 	if(not(array_contains_ic(array_keys(@condition),@event['reason']))) {
-		console(concat('The spawn reason: ',@event['reason'],' is not defined for: ',@event['type'],' in spawnconditions.yml'))
+		console('The spawn reason: '.@event['reason'].' is not defined for: '.@event['type'].' in spawnconditions.yml')
 		return()
 	}
 
-	if(not(@condition['enabled'])) {
+	if(! @config['mobs'][@event['type']]['enabled']) {
 		cancel()
 		return()
 	} else {
-		@allowed = @condition[to_lower(@event['reason'])]
-		if(not(@allowed)) {
+		if(@config['mobs'][@event['type']][@event['reason']]) {
+			console('Cancelling spawn of: '.@event['type'].' because the spawn reason '.@event['reason'].' is not enabled for this mob.')
 			cancel()
 			return()
 		}
