@@ -1,10 +1,11 @@
-bind('player_interact',null,array(block: data_values('Flower_pot')),@event,
-	cancel()
+bind('player_interact',null,array(block: 'FLOWER_POT', button: 'right', hand: 'main_hand'),@event,
 	@yml = yml_decode(read('config.yml'))
 	@item = @event['item']
-	if(@item == 0,
-		return(),
-	)
+	if(@item == null) {
+		return()
+	} else {
+		cancel()
+	}
 	@dataname = data_name(@item)
 	@itemname = reg_replace(' ','_',@dataname)
 	@player = @event['player']

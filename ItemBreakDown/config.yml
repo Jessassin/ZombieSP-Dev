@@ -83,17 +83,17 @@ diamond_hoe:
   return_nuggets: false
 
 #armor
-leather_cap:
+leather_helmet:
   material: leather
   durability: 55
   ingot_cost: 5
   return_nuggets: false
-leather_tunic:
+leather_chestplate:
   material: leather
-  durability: 78
+  durability: 80
   ingot_cost: 8
   return_nuggets: false
-leather_pants:
+leather_leggings:
   material: leather
   durability: 75
   ingot_cost: 7
@@ -103,24 +103,24 @@ leather_boots:
   durability: 65
   ingot_cost: 4
   return_nuggets: false
-chain_helmet:
+chainmail_helmet:
   material: iron_ingot
   durability: 165
   ingot_cost: 5
   return_nuggets: false
-chain_chestplate:
+chainmail_chestplate:
   material: iron_ingot
   durability: 240
   ingot_cost: 8
   return_nuggets: false
-chain_leggings:
+chainmail_leggings:
   material: iron_ingot
   durability: 225
   ingot_cost: 7
   return_nuggets: false
-chain_boots:
+chainmail_boots:
   material: iron_ingot
-  durability: 170
+  durability: 195
   ingot_cost: 4
   return_nuggets: false
 iron_helmet:
@@ -140,7 +140,7 @@ iron_leggings:
   return_nuggets: false
 iron_boots:
   material: iron_ingot
-  durability: 170
+  durability: 195
   ingot_cost: 4
   return_nuggets: false
 golden_helmet:
@@ -180,6 +180,6 @@ diamond_leggings:
   return_nuggets: false
 diamond_boots:
   material: diamond
-  durability: 422
+  durability: 429
   ingot_cost: 4
   return_nuggets: false

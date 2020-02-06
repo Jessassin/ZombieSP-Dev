@@ -1,3 +1,10 @@
+proc('_debugmode') {
+	@file = read('config.yml')
+	@yml = yml_decode(@file)
+	@debug = @yml['config']['debug']
+	return(@debug)
+}
+
 proc('_respawn_tick_start',
 	@settings = yml_decode(read('config.yml'))['settings']
 	@lowinterval = @settings['low']['respawn-interval']
@@ -124,6 +131,14 @@ proc('_get_rand_id',@quality,
 	@query = query('testserver', 'SELECT id FROM lootboxes WHERE quality=? AND enabled=1', @quality)
 	#select random ID and assign value to @return, then return @return
 	@index = array_rand(@query)
-	@return = @query[@index[0]]['ID']
+	if(array_index_exists(@index,0)) {
+		@return = @query[@index[0]]['ID']
+	} else {
+		if(_debugmode()) {
+			die("There are no lootboxes stored in the Database")
+		} else {
+			die()
+		}
+	}
 	return(@return)
 )

@@ -2,7 +2,8 @@
 # respawn-all:
 # -true respawns all boxes on every respawn event
 # -false respawns a single random box per respawn event
-
+config:
+  debug: false
 settings:
   high:
     respawn-interval: 10000
