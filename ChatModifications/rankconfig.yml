@@ -90,11 +90,21 @@ vip:
   order: 18
 activebeta:
   prefix: ''
-  suffix: '&b[�]'
+  suffix: '&b[β]'
   description: 'Active beta tester'
   order: 19
 beta:
   prefix: ''
-  suffix: '&7[�]'
-  description: 'Previous beta tester'
+  suffix: '&7[β]'
+  description: 'Beta Participant'
   order: 20
+activealpha:
+  prefix: ''
+  suffix: '&b[α]'
+  description: 'Active alpha tester'
+  order: 21
+alpha:
+  prefix: ''
+  suffix: '&7[α]'
+  description: 'Alpha Participant'
+  order: 22

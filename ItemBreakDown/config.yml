@@ -7,179 +7,179 @@
 
 #Tools/weapons
 iron_shovel:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 250
   ingot_cost: 1
   return_nuggets: false
 iron_pickaxe:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 250
   ingot_cost: 3
   return_nuggets: false
 iron_axe:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 250
   ingot_cost: 3
   return_nuggets: false
 iron_sword:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 250
   ingot_cost: 2
   return_nuggets: false
 iron_hoe:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 250
   ingot_cost: 2
   return_nuggets: false
 golden_shovel:
-  material: gold_ingot
+  material: GOLD_INGOT
   durability: 32
   ingot_cost: 1
   return_nuggets: false
 golden_pickaxe:
-  material: gold_ingot
+  material: GOLD_INGOT
   durability: 32
   ingot_cost: 3
   return_nuggets: false
 golden_axe:
-  material: gold_ingot
+  material: GOLD_INGOT
   durability: 32
   ingot_cost: 3
   return_nuggets: false
 golden_sword:
-  material: gold_ingot
+  material: GOLD_INGOT
   durability: 32
   ingot_cost: 2
   return_nuggets: false
 golden_hoe:
-  material: gold_ingot
+  material: GOLD_INGOT
   durability: 32
   ingot_cost: 2
   return_nuggets: false
 diamond_shovel:
-  material: diamond
+  material: DIAMOND
   durability: 1561
   ingot_cost: 1
   return_nuggets: false
 diamond_pickaxe:
-  material: diamond
+  material: DIAMOND
   durability: 1561
   ingot_cost: 3
   return_nuggets: false
 diamond_axe:
-  material: diamond
+  material: DIAMOND
   durability: 1561
   ingot_cost: 3
   return_nuggets: false
 diamond_sword:
-  material: diamond
+  material: DIAMOND
   durability: 1561
   ingot_cost: 2
   return_nuggets: false
 diamond_hoe:
-  material: diamond
+  material: DIAMOND
   durability: 1561
   ingot_cost: 2
   return_nuggets: false
 
 #armor
 leather_helmet:
-  material: leather
+  material: LEATHER
   durability: 55
   ingot_cost: 5
   return_nuggets: false
 leather_chestplate:
-  material: leather
+  material: LEATHER
   durability: 80
   ingot_cost: 8
   return_nuggets: false
 leather_leggings:
-  material: leather
+  material: LEATHER
   durability: 75
   ingot_cost: 7
   return_nuggets: false
 leather_boots:
-  material: leather
+  material: LEATHER
   durability: 65
   ingot_cost: 4
   return_nuggets: false
 chainmail_helmet:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 165
   ingot_cost: 5
   return_nuggets: false
 chainmail_chestplate:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 240
   ingot_cost: 8
   return_nuggets: false
 chainmail_leggings:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 225
   ingot_cost: 7
   return_nuggets: false
 chainmail_boots:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 195
   ingot_cost: 4
   return_nuggets: false
 iron_helmet:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 165
   ingot_cost: 5
   return_nuggets: false
 iron_chestplate:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 240
   ingot_cost: 8
   return_nuggets: false
 iron_leggings:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 225
   ingot_cost: 7
   return_nuggets: false
 iron_boots:
-  material: iron_ingot
+  material: IRON_INGOT
   durability: 195
   ingot_cost: 4
   return_nuggets: false
 golden_helmet:
-  material: gold_ingot
+  material: GOLD_INGOT
   durability: 77
   ingot_cost: 5
   return_nuggets: false
 golden_chestplate:
-  material: gold_ingot
+  material: GOLD_INGOT
   durability: 112
   ingot_cost: 8
   return_nuggets: false
 golden_leggings:
-  material: gold_ingot
+  material: GOLD_INGOT
   durability: 105
   ingot_cost: 7
   return_nuggets: false
 golden_boots:
-  material: gold_ingot
+  material: GOLD_INGOT
   durability: 91
   ingot_cost: 4
   return_nuggets: false
 diamond_helmet:
-  material: diamond
+  material: DIAMOND
   durability: 363
   ingot_cost: 5
   return_nuggets: false
 diamond_chestplate:
-  material: diamond
+  material: DIAMOND
   durability: 528
   ingot_cost: 8
   return_nuggets: false
 diamond_leggings:
-  material: diamond
+  material: DIAMOND
   durability: 495
   ingot_cost: 7
   return_nuggets: false
 diamond_boots:
-  material: diamond
+  material: DIAMOND
   durability: 429
   ingot_cost: 4
   return_nuggets: false

@@ -1,16 +1,14 @@
-bind('player_interact',null,array(block: 'FLOWER_POT', button: 'right', hand: 'main_hand'),@event,
-	@yml = yml_decode(read('config.yml'))
+bind('player_interact',null,array(block: 'FLOWER_POT', button: 'right', hand: 'main_hand'),@event) {
+	@config = yml_decode(read('config.yml'))
 	@item = @event['item']
 	if(@item == null) {
 		return()
 	} else {
 		cancel()
 	}
-	@dataname = data_name(@item)
-	@itemname = reg_replace(' ','_',@dataname)
-	@player = @event['player']
-	if(array_contains_ic(array_keys(@yml),@itemname),
-		_melt_item(@itemname,@player),
-		tmsg(@player,'You can not break down that item!')
-	)
-)
+	if(array_contains_ic(array_keys(@config),@event['item']['name'])) {
+		_melt_item(@event['item']['name'],@event['player'])
+	} else {
+		tmsg(@event['player'],'You can not break down that item!')
+	}
+}

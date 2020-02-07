@@ -1,18 +1,19 @@
 _respawn_tick_start()
 
-bind('player_interact',null,array(block: '33'),@event,
-	@damage = reg_split(':',@event['block'])[1]
-	if(not(or(equals(@damage,6),equals(@damage,7))),
-		return()
-	)
+bind('player_interact',null,array(block: 'HAY_BLOCK',button: 'right'),@event,
 	@file = read('config.yml')
 	@yml = yml_decode(@file)
-	set_block_at(@event['location'],0)
-	make_effect(@event['location'],'STEP_SOUND:5',8)
-	set_timeout(400,closure(break_block(@event['location'])))
+	set_block(@event['location'],'AIR')
+	make_effect(@event['location'],'ZOMBIE_DESTROY_DOOR:1',8)
+	@entitylocation = @event['location']
+	@entitylocation['x'] = @entitylocation['x'] + 0.5
+	@entitylocation['y'] = @entitylocation['y'] + 0.5
+	@entitylocation['z'] = @entitylocation['z'] + 0.5
+	@effect = spawn_entity('AREA_EFFECT_CLOUD',1,@entitylocation, closure(@id){set_entity_spec(@id, associative_array(duration: 1, radius: 0, particle: 'CRIT'))};)[0]
+	play_entity_effect(@effect,'ARROW_PARTICLES')
 	@low = @yml['drops']['low']
 	@high = @yml['drops']['high']
-	if(@event['block'] == '33:6',
+	if(@event['block'] == 'HAY_BLOCK', #TODO: THIS NEEDS TO BE A QUERY
 		for(assign(@i,0), @i < length(@low), @i++,
 			@item = array_keys(@low)[@i]
 			@chance = @low[@item]['chance']
@@ -27,7 +28,7 @@ bind('player_interact',null,array(block: '33'),@event,
 			)
 		)
 	)
-	if(@event['block'] == '33:7',
+	if(@event['block'] == 'HAY_BLOCK', #TODO: THIS NEEDS TO BE A QUERY
 		for(assign(@i,0), @i < length(@high), @i++,
 			@item = array_keys(@high)[@i]
 			@chance = @high[@item]['chance']

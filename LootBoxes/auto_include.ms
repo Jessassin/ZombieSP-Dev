@@ -47,11 +47,12 @@ proc('_respawn_box_id',@id,
 	@query = @query[0]
 	@loc = array(@query['x'],@query['y'],@query['z'],'world')
 	@quality = @query['quality']
-	if(@quality == 1,
-		@id = '33:7',
-		@id = '33:6'
-	)
-	set_block_at(@loc,@id)
+	if(@quality == 1) {
+		@id = 'HAY_BLOCK'
+	} else {
+		@id = 'HAY_BLOCK'
+	}
+	set_block(@loc,@id)
 )
 
 proc('_format_location',@string,
@@ -132,7 +133,7 @@ proc('_get_rand_id',@quality,
 	#select random ID and assign value to @return, then return @return
 	@index = array_rand(@query)
 	if(array_index_exists(@index,0)) {
-		@return = @query[@index[0]]['ID']
+		@return = @query[@index[0]]['id']
 	} else {
 		if(_debugmode()) {
 			die("There are no lootboxes stored in the Database")
