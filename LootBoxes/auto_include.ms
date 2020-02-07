@@ -132,7 +132,7 @@ proc('_get_rand_id',@quality,
 	#select random ID and assign value to @return, then return @return
 	@index = array_rand(@query)
 	if(array_index_exists(@index,0)) {
-		@return = @query[@index[0]]['ID']
+		@return = @query[@index[0]]['id']
 	} else {
 		if(_debugmode()) {
 			die("There are no lootboxes stored in the Database")
