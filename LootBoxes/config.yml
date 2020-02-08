@@ -18,25 +18,35 @@ settings:
 #Chance is chance of spawning / 100
 drops:
   low:
-    3:
+    DIRT:
       chance: 75
-    4:
+    COBBLESTONE:
       chance: 75
-    5:
+    OAK_PLANKS:
       chance: 75
-    12:
+    SPRUCE_PLANKS:
       chance: 75
-    13:
+    JUNGLE_PLANKS:
       chance: 75
-    17:
-      chance: 100
-    "17:1":
-      chance: 100
-    "17:2":
-      chance: 100
-    "17:3":
-      chance: 100
+    ACACIA_PLANKS:
+      chance: 75
+    DARK_OAK_PLANKS:
+      chance: 75
+    SAND:
+      chance: 75
+    GRAVEL:
+      chance: 75
+    OAK_LOG:
+      chance: 75
+    SPRUCE_LOG:
+      chance: 75
+    JUNGLE_LOG:
+      chance: 75
+    ACACIA_LOG:
+      chance: 75
+    DARK_OAK_LOG:
+      chance: 75
 
   high:
-    264:
+    DIAMOND:
       chance: 20
