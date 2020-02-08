@@ -19,11 +19,11 @@ bind('player_interact',null,array(block: 'HAY_BLOCK', button: 'right'),@event) {
 			#if the drop chance is less than 100%, spawn on percentage chance
 			if(@chance < 100) {
 				if(rand(0,100) <= @chance) {
-					drop_item(@event['location'],array(type: @item),true)
+					drop_item(@@entitylocation['location'],array(type: @item),true)
 				}
 			} else {
 				#else, spawn item
-				drop_item(@event['location'],array(type: @item),true)
+				drop_item(@@entitylocation['location'],array(type: @item),true)
 			}
 		}
 	}
@@ -34,11 +34,11 @@ bind('player_interact',null,array(block: 'HAY_BLOCK', button: 'right'),@event) {
 			#if the drop chance is less than 100%, spawn on percentage chance
 			if(@chance < 100) {
 				if(rand(0,100) <= @chance) {
-					drop_item(@event['location'],array(type: @item),true)
+					drop_item(@@entitylocation['location'],array(type: @item),true)
 				}
 			} else {
 				#else, spawn item
-				drop_item(@event['location'],array(type: @item),true)
+				drop_item(@@entitylocation['location'],array(type: @item),true)
 			}
 		}
 	}
