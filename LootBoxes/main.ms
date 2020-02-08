@@ -19,11 +19,13 @@ bind('player_interact',null,array(block: 'HAY_BLOCK', button: 'right'),@event) {
 			#if the drop chance is less than 100%, spawn on percentage chance
 			if(@chance < 100) {
 				if(rand(0,100) <= @chance) {
-					drop_item(@entitylocation, array(name: @item), true)
+					@uuid = spawn_entity('dropped_item', 1, @event['location'])
+					set_entity_spec(@uuid[0], array(itemstack: array(meta: null, name: @item, qty: 1), pickupdelay: 1))
 				}
 			} else {
 				#else, spawn item
-				drop_item(@entitylocation, array(name: @item), true)
+				@uuid = spawn_entity('dropped_item', 1, @event['location'])
+				set_entity_spec(@uuid[0], array(itemstack: array(meta: null, name: @item, qty: 1), pickupdelay: 1))
 			}
 		}
 	}
@@ -34,11 +36,13 @@ bind('player_interact',null,array(block: 'HAY_BLOCK', button: 'right'),@event) {
 			#if the drop chance is less than 100%, spawn on percentage chance
 			if(@chance < 100) {
 				if(rand(0,100) <= @chance) {
-					drop_item(@entitylocation, array(name: @item), true)
+					@uuid = spawn_entity('dropped_item', 1, @event['location'])
+					set_entity_spec(@uuid[0], array(itemstack: array(meta: null, name: @item, qty: 1), pickupdelay: 1))
 				}
 			} else {
 				#else, spawn item
-				drop_item(@entitylocation, array(name: @item), true)
+				@uuid = spawn_entity('dropped_item', 1, @event['location'])
+				set_entity_spec(@uuid[0], array(itemstack: array(meta: null, name: @item, qty: 1), pickupdelay: 1))
 			}
 		}
 	}
