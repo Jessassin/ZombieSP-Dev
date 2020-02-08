@@ -1,4 +1,4 @@
-proc('_melt_item',@itemname,@player,
+proc('_melt_item',@itemname,@player,@location,
 	@yml = yml_decode(read('config.yml'))
 	@itemsettings = @yml[to_lower(@itemname)]
 	@selecteditem = pinv(@player,pheld_slot())
@@ -14,7 +14,11 @@ proc('_melt_item',@itemname,@player,
 	if(@returningots == 0) {
 		die("Breaking this down would return no materials!")
 	} else {
+		@location['x'] = @location['x'] + 0.5
+		@location['y'] = @location['y'] + 0.5
+		@location['z'] = @location['z'] + 0.5
 		ptake_item(@player,@selecteditem)
-		pgive_item(@player,array(name: @itemsettings['material'], qty: @returningots))
+		@uuid = spawn_entity('dropped_item', 1, @location)
+		set_entity_spec(@uuid[0], array(itemstack: array(meta: null, name: @itemsettings['material'], qty: @returningots), pickupdelay: 1))
 	}
 )
