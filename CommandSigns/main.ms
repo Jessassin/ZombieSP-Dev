@@ -1,5 +1,8 @@
 #binds to player interact, filters to interactions with "sign post" block only
-bind('player_interact', null, array(button: 'right', itemname: 'AIR', hand: 'main_hand'), @event) {
+bind('player_interact', null, array(button: 'right', hand: 'main_hand'), @event) {
+	if(@event['block'] === null) {
+		return()
+	}
 	@block = @event['block']
 	#it is not a sign, stop processing event
 	if(!string_ends_with(@event['block'],'SIGN')) {
@@ -14,8 +17,9 @@ bind('player_interact', null, array(button: 'right', itemname: 'AIR', hand: 'mai
 	if(not(equals(@line1,color('a').'[CommandSign]'))) {
 		return()
 	}
-	#else try running command starting on line 2
-	try(run_cmd(@line2.' '.@line3.' '.@line4))
+	#else cancel the event and run command starting on line 2
+	cancel()
+	run_cmd(@line2.' '.@line3.' '.@line4)
 }
 
 #bind sign changed event

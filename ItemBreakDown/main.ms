@@ -1,4 +1,7 @@
 bind('player_interact',null,array(block: 'FLOWER_POT', button: 'right', hand: 'main_hand'),@event) {
+	if(@event['block'] === null) {
+		return()
+	}
 	@config = yml_decode(read('config.yml'))
 	@item = @event['item']
 	if(@item == null) {

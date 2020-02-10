@@ -1,6 +1,9 @@
 _respawn_tick_start()
 
-bind('player_interact',null,array(block: 'HAY_BLOCK', button: 'right'),@event) {
+bind('player_interact',null,array(block: 'HAY_BLOCK', button: 'right', hand: 'main_hand'),@event) {
+	if(@event['block'] === null) {
+		return()
+	}
 	@yml = yml_decode(read('config.yml'))
 	set_block(@event['location'], 'AIR')
 	make_effect(@event['location'], 'ZOMBIE_DESTROY_DOOR:1', 8)
@@ -13,6 +16,7 @@ bind('player_interact',null,array(block: 'HAY_BLOCK', button: 'right'),@event) {
 	@low = @yml['drops']['low']
 	@high = @yml['drops']['high']
 	if(@event['block'] == 'HAY_BLOCK') { #TODO: THIS NEEDS TO BE A QUERY
+		cancel()
 		for(assign(@i,0), @i < length(@low), @i++) {
 			@item = array_keys(@low)[@i]
 			@chance = @low[@item]['chance']
@@ -30,6 +34,7 @@ bind('player_interact',null,array(block: 'HAY_BLOCK', button: 'right'),@event) {
 		}
 	}
 	if(@event['block'] == 'HAY_BLOCK') { #TODO: THIS NEEDS TO BE A QUERY
+		cancel()
 		for(assign(@i,0), @i < length(@high), @i++) {
 			@item = array_keys(@high)[@i]
 			@chance = @high[@item]['chance']
