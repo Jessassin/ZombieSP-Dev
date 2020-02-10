@@ -13,8 +13,8 @@ bind('player_interact', null, array(button: 'right', hand: 'main_hand'), @event)
 		@cost = replace(@text[3],'$','')
 		msg(@qty.' '.@item.' '.@cost.' '.@cost * @qty)
 		cancel()
-		if(_acc_balance(@player) >= @cost) {
-			_acc_subtract(@player, @cost * @qty) #TODO: FIX THIS - IF STATEMENT DOES NOT MATCH LOGIC HERE
+		if(_acc_balance(@player) >= @cost) * @qty {
+			_acc_subtract(@player, @cost * @qty)
 			pgive_item(@player, data_values(@item), @qty)
 			tmsg(@player, colorize('Bought '.@qty.' of '.@item.' for $'.@cost * @qty))
 		} else {
